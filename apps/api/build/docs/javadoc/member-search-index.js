@@ -1,0 +1,1 @@
+memberSearchIndex = [{"p":"example.vertx.api","c":"App","l":"App()","u":"%3Cinit%3E()"},{"p":"example.vertx.api","c":"App","l":"main(String[])","u":"main(java.lang.String[])"}];updateSearchResults();

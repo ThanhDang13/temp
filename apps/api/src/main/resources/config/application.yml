@@ -1,0 +1,39 @@
+application:
+  basePackage: vn.truyenrealm.core
+  process:
+    enable: true
+app:
+  hostname: aeoc.io.vn
+spring:
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    driver-class-name: org.postgresql.Driver
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
+vertx:
+  security:
+    enabled: true
+    jwt:
+      enabled: true
+      mapping-urls:
+      secret-original: 5930d1e5-0b3a-4efb-bbfb-8e039fbe8b38
+      secret-gen-algorithm: sha1-hex
+      secret-key: ebb45472b2b2f2332a878adf21ac8afdc65474e2
+      header: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9
+      expired-in: 15552000000
+  clustered:
+    enabled: false
+  deploymentOptions:
+    instances: 2
+    workerPoolSize: 40
+  vertxOptions:
+    eventLoopPoolSize: 4
+  webclient:
+    timeOut:
+      tokenizer: 5000
+  jooq:
+    enabled: true
+  mongo:
+    enabled: false

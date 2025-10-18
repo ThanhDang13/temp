@@ -1,0 +1,24 @@
+plugins {
+    id 'java-library'
+}
+
+group = 'realm.packages.vertx.core'
+
+dependencies {
+    api "io.vertx:vertx-core:${vertxVersion}"
+    api "io.vertx:vertx-web:${vertxVersion}"
+    api "io.vertx:vertx-rx-java3:${vertxVersion}"
+    api "io.vertx:vertx-hazelcast:${vertxVersion}"
+
+    api "org.springframework.boot:spring-boot-starter"
+    api "org.springframework.boot:spring-boot-starter-web"
+    api "org.springframework.boot:spring-boot-starter-webflux"
+
+    api "io.jsonwebtoken:jjwt-api:${jjwtVersion}"
+    api "io.jsonwebtoken:jjwt-impl:${jjwtVersion}"
+    api "io.jsonwebtoken:jjwt-jackson:${jjwtVersion}"
+
+    api "org.apache.commons:commons-lang3:${commonsLang3Version}"
+    api "commons-io:commons-io:${commonsIoVersion}"
+}
+

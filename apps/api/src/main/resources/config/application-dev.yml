@@ -1,0 +1,12 @@
+vertx:
+  server:
+    port: 8080
+
+spring:
+  datasource:
+    url: jdbc:postgresql://127.0.0.1:5432/rem
+    username: postgres
+    password: password
+
+server:
+  port: 8082

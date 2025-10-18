@@ -1,0 +1,67 @@
+plugins {
+    id 'java-library'
+    id "dev.nx.gradle.project-graph" version "0.1.0"
+    id 'java'
+    id 'io.spring.dependency-management' version '1.1.6'
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_21
+    targetCompatibility = JavaVersion.VERSION_21
+}
+
+ext {
+    vertxVersion = '4.5.0'
+    jjwtVersion = '0.12.6'
+    jooqVersion = '3.18.6'
+    lombokVersion = '1.18.26'
+    hikariVersion = '2.5.1'
+    r2dbcPoolVersion = '1.0.2.RELEASE'
+    r2dbcPostgresVersion = '1.0.7.RELEASE'
+    springDataR2dbcVersion = '3.3.2'
+    commonsLang3Version = '3.17.0'
+    commonsIoVersion = '2.14.0'
+    reflectionsVersion = '0.9.11'
+    rxjavaVersion = '3.1.8'
+}
+
+allprojects {
+    version = "1.0.0-SNAPSHOT"
+    repositories {
+        mavenCentral()
+    }
+
+    java {
+        toolchain {
+            languageVersion.set(JavaLanguageVersion.of(21))
+        }
+    }
+}
+
+subprojects {
+    group = 'realm'
+    version = 1.0
+
+    apply plugin: "dev.nx.gradle.project-graph"
+    apply plugin: 'java'
+    apply plugin: 'io.spring.dependency-management'
+
+    tasks.withType(JavaCompile).configureEach {
+        options.encoding = 'UTF-8'
+    }
+
+
+
+    dependencyManagement {
+        imports {
+            mavenBom "org.springframework.boot:spring-boot-dependencies:3.3.4"
+        }
+    }
+
+    dependencies {
+        compileOnly("org.projectlombok:lombok:1.18.32")
+        annotationProcessor("org.projectlombok:lombok:1.18.32")
+
+        implementation("jakarta.annotation:jakarta.annotation-api:2.1.1")
+    }
+}

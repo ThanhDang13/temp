@@ -1,0 +1,30 @@
+plugins {
+    id 'java'
+    id 'application'
+    id 'org.springframework.boot' version '3.3.4'
+    id 'io.spring.dependency-management'
+}
+
+
+dependencies {
+    implementation project(':packages:vertx:core')
+    //implementation project(':r2dbc')
+    //implementation project(':jdbc')
+    //implementation project(':jooq')
+
+    // Module-specific dependencies
+    implementation "org.springframework.boot:spring-boot-starter-webflux"
+    implementation "org.springframework.boot:spring-boot-starter-web"
+    implementation "com.alibaba:fastjson:1.2.61"
+    implementation "org.json:json:20160810"
+    implementation "com.jayway.jsonpath:json-path:2.8.0"
+    implementation "org.mindrot:jbcrypt:0.4"
+}
+
+bootRun {
+    systemProperty "spring.profiles.active", "dev"
+}
+
+application {
+    mainClass = 'realm.apps.api.RealmApplication'
+}
