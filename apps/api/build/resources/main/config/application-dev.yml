@@ -1,6 +1,6 @@
 vertx:
   server:
-    port: 8080
+    port: ${API_PORT:8081}
 
 spring:
   datasource:

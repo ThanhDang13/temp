@@ -5,7 +5,7 @@ import io.vertx.core.http.HttpMethod;
 import io.vertx.rxjava3.ext.web.RoutingContext;
 import lombok.Data;
 import org.springframework.beans.factory.annotation.Autowired;
-import realm.packages.vertx.core.config.vertx.exeception.AuthenticationException;
+import realm.packages.vertx.core.config.vertx.exception.AuthenticationException;
 import realm.packages.vertx.core.config.vertx.filter.VertxGenericFilter;
 import realm.packages.vertx.core.config.vertx.filter.security.jwt.JWTService;
 import realm.packages.vertx.core.config.vertx.security.model.UrlPatternMatcher;

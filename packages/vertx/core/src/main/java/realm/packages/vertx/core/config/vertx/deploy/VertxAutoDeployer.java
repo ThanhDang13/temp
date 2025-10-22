@@ -33,7 +33,7 @@ public class VertxAutoDeployer {
                 EnableAutoDeployVerticle autoDeploy = Class.forName(list.get(0).getBeanClassName()).getAnnotation(EnableAutoDeployVerticle.class);
                 vertxDeployer.deployVerticle(autoDeploy.verticle().getName());
             } catch (Exception e) {
-                //e.printStackTrace();
+                e.printStackTrace();
             }
         }
     }

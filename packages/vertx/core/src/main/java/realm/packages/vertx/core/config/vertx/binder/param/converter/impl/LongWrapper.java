@@ -2,7 +2,7 @@ package realm.packages.vertx.core.config.vertx.binder.param.converter.impl;
 
 import lombok.Getter;
 import lombok.Setter;
-import realm.packages.vertx.core.config.vertx.exeception.VertxSpringCoreException;
+import realm.packages.vertx.core.config.vertx.exception.VertxSpringCoreException;
 
 @Getter
 @Setter

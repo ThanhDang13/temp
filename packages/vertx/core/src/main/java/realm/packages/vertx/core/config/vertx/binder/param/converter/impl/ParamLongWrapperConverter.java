@@ -4,7 +4,7 @@ import org.apache.commons.lang3.math.NumberUtils;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Component;
 import realm.packages.vertx.core.config.vertx.binder.param.converter.ParamConverter;
-import realm.packages.vertx.core.config.vertx.exeception.VertxSpringCoreException;
+import realm.packages.vertx.core.config.vertx.exception.VertxSpringCoreException;
 
 @Component
 public class ParamLongWrapperConverter extends ParamConverter<LongWrapper> {

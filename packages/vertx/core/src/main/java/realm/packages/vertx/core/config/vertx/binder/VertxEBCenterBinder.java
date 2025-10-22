@@ -18,8 +18,8 @@ import realm.packages.vertx.core.annotation.eventbus.VertxEBMapping;
 import realm.packages.vertx.core.config.application.ApplicationConfigModel;
 import realm.packages.vertx.core.config.vertx.binder.eb.VertxEBApi;
 import realm.packages.vertx.core.config.vertx.binder.eb.VertxEBApiConfigurer;
-import realm.packages.vertx.core.config.vertx.exeception.VertxSpringCoreException;
-import realm.packages.vertx.core.config.vertx.exeception.eb.EBExceptionResolver;
+import realm.packages.vertx.core.config.vertx.exception.VertxSpringCoreException;
+import realm.packages.vertx.core.config.vertx.exception.eb.EBExceptionResolver;
 import realm.packages.vertx.core.config.vertx.handler.eb.ConsumerEBResultResolver;
 
 import java.lang.reflect.Method;

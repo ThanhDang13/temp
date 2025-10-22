@@ -1,5 +1,5 @@
 application:
-  basePackage: vn.truyenrealm.core
+  basePackage: realm.apps.api
   process:
     enable: true
 app:

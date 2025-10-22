@@ -8,6 +8,5 @@ import java.lang.annotation.*;
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
 public @interface EnableAutoDeployVerticle {
-
     Class verticle() default DefaultSpringVerticle.class;
 }

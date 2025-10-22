@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.annotation.AnnotationUtils;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Component;
-import realm.packages.vertx.core.config.vertx.exeception.VertxSpringCoreException;
+import realm.packages.vertx.core.config.vertx.exception.VertxSpringCoreException;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;

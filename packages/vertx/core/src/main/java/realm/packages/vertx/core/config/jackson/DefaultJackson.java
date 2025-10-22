@@ -10,7 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.converter.json.MappingJackson2HttpMessageConverter;
 import org.springframework.stereotype.Component;
-import realm.packages.vertx.core.config.vertx.exeception.VertxSpringCoreException;
+import realm.packages.vertx.core.config.vertx.exception.VertxSpringCoreException;
 
 import java.io.IOException;
 

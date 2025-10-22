@@ -28,8 +28,8 @@ import realm.packages.vertx.core.config.vertx.binder.param.extractor.ParamExtrac
 import realm.packages.vertx.core.config.vertx.binder.path.PathConverter;
 import realm.packages.vertx.core.config.vertx.binder.rest.VertxRestApi;
 import realm.packages.vertx.core.config.vertx.binder.rest.VertxRestApiConfigurer;
-import realm.packages.vertx.core.config.vertx.exeception.VertxSpringCoreWaningException;
-import realm.packages.vertx.core.config.vertx.exeception.http.ExceptionResolver;
+import realm.packages.vertx.core.config.vertx.exception.VertxSpringCoreWaningException;
+import realm.packages.vertx.core.config.vertx.exception.http.ExceptionResolver;
 import realm.packages.vertx.core.config.vertx.filter.VertxFilterStrategy;
 import realm.packages.vertx.core.config.vertx.handler.http.ControllerBeforeResolver;
 import realm.packages.vertx.core.config.vertx.handler.http.ControllerResultResolver;

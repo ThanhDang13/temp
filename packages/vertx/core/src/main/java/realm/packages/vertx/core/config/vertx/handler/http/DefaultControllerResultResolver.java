@@ -9,7 +9,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.http.ResponseEntity;
 import realm.packages.vertx.core.config.jackson.DefaultJackson;
 import realm.packages.vertx.core.config.vertx.binder.rest.VertxRestApi;
-import realm.packages.vertx.core.config.vertx.exeception.VertxSpringCoreException;
+import realm.packages.vertx.core.config.vertx.exception.VertxSpringCoreException;
 
 import java.io.PrintWriter;
 import java.io.StringWriter;

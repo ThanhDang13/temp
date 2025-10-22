@@ -1,4 +1,4 @@
-package realm.packages.vertx.core.config.vertx.exeception;
+package realm.packages.vertx.core.config.vertx.exception;
 
 import io.reactivex.rxjava3.core.Single;
 

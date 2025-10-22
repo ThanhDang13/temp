@@ -3,7 +3,7 @@ package realm.packages.vertx.core.config.vertx.binder.param.converter.impl;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Component;
 import realm.packages.vertx.core.config.vertx.binder.param.converter.ParamConverter;
-import realm.packages.vertx.core.config.vertx.exeception.VertxSpringCoreException;
+import realm.packages.vertx.core.config.vertx.exception.VertxSpringCoreException;
 
 @Component
 public class ParamBooleanConverter extends ParamConverter<Boolean> {

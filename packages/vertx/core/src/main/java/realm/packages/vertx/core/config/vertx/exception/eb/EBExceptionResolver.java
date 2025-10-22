@@ -1,4 +1,4 @@
-package realm.packages.vertx.core.config.vertx.exeception.eb;
+package realm.packages.vertx.core.config.vertx.exception.eb;
 
 import io.vertx.rxjava3.core.eventbus.Message;
 

@@ -1,4 +1,4 @@
-package realm.packages.vertx.core.config.vertx.exeception.http;
+package realm.packages.vertx.core.config.vertx.exception.http;
 
 import io.vertx.rxjava3.ext.web.RoutingContext;
 

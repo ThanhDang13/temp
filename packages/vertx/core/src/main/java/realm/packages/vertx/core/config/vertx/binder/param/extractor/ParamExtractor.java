@@ -18,7 +18,7 @@ import realm.packages.vertx.core.config.vertx.binder.param.converter.type.VertxF
 import realm.packages.vertx.core.config.vertx.binder.param.data.JsonObjectBody;
 import realm.packages.vertx.core.config.vertx.binder.param.parser.ControllerParamParser;
 import realm.packages.vertx.core.config.vertx.binder.param.standardizer.ParamStandardizer;
-import realm.packages.vertx.core.config.vertx.exeception.VertxSpringCoreException;
+import realm.packages.vertx.core.config.vertx.exception.VertxSpringCoreException;
 import realm.packages.vertx.core.config.vertx.security.model.principal.VertxPrincipal;
 import realm.packages.vertx.core.config.vertx.security.model.principal.impl.VertxUser;
 

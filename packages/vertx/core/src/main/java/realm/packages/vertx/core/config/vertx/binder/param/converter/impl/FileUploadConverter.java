@@ -5,7 +5,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Component;
 import realm.packages.vertx.core.config.vertx.binder.param.converter.ParamConverter;
 import realm.packages.vertx.core.config.vertx.binder.param.converter.type.VertxFileUpload;
-import realm.packages.vertx.core.config.vertx.exeception.VertxSpringCoreException;
+import realm.packages.vertx.core.config.vertx.exception.VertxSpringCoreException;
 
 import java.io.File;
 

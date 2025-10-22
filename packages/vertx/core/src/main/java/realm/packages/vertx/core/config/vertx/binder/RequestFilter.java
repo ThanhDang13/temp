@@ -5,7 +5,7 @@ import io.vertx.rxjava3.ext.web.Router;
 import org.springframework.context.ApplicationContext;
 import realm.packages.vertx.core.config.vertx.binder.path.PathConverter;
 import realm.packages.vertx.core.config.vertx.binder.rest.VertxRestApi;
-import realm.packages.vertx.core.config.vertx.exeception.http.ExceptionResolver;
+import realm.packages.vertx.core.config.vertx.exception.http.ExceptionResolver;
 import realm.packages.vertx.core.config.vertx.filter.VertxFilterStrategy;
 import realm.packages.vertx.core.config.vertx.filter.VertxGenericFilter;
 import realm.packages.vertx.core.config.vertx.security.VertxSecurityProvider;

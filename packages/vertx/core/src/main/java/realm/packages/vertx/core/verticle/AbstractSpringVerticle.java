@@ -7,8 +7,13 @@ import lombok.Getter;
 import lombok.Setter;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.BeansException;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.ApplicationContextAware;
+import org.springframework.context.annotation.Scope;
 import org.springframework.context.support.GenericApplicationContext;
 import org.springframework.core.env.ConfigurableEnvironment;
+import org.springframework.stereotype.Component;
 import realm.packages.vertx.core.config.vertx.binder.VertxBeforeCenterBinder;
 import realm.packages.vertx.core.config.vertx.binder.VertxEBCenterBinder;
 import realm.packages.vertx.core.config.vertx.binder.VertxOtherCenterBinder;
@@ -17,7 +22,7 @@ import realm.packages.vertx.core.config.vertx.deploy.VertxDeployer;
 
 @Getter
 @Setter
-public abstract class AbstractSpringVerticle extends AbstractVerticle {
+public abstract class AbstractSpringVerticle extends AbstractVerticle implements ApplicationContextAware {
 
     private final Logger logger = LoggerFactory.getLogger(this.getClass());
 
@@ -25,6 +30,12 @@ public abstract class AbstractSpringVerticle extends AbstractVerticle {
     public Router router;
     public HttpServer server;
     protected ConfigurableEnvironment env;
+
+    @Override
+    public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
+        this.applicationContext = (GenericApplicationContext) applicationContext;
+    }
+
 
     @Override
     public void start() throws Exception {
@@ -35,7 +46,6 @@ public abstract class AbstractSpringVerticle extends AbstractVerticle {
         registerRouter();
         registerEB();
         registerOthers();
-
     }
 
     private void registerBeforeRouter() {

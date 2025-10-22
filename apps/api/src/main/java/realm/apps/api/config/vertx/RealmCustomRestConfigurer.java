@@ -2,7 +2,7 @@
 //
 //import org.springframework.stereotype.Component;
 //import vn.backend.entity.share.config.vertx.CustomRestConfigurer;
-//import vn.backend.spring.vertx.core.config.vertx.security.SecurityResolver;
+//import realm.packages.vertx.core.config.vertx.security.SecurityResolver;
 //
 //@Component
 //public class RealmCustomRestConfigurer extends CustomRestConfigurer {
