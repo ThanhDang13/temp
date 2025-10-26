@@ -23,7 +23,7 @@ pipeline {
             steps {
                 echo 'Building the application...'
                 script {
-                    def buildResult = sh(script: ' ./gradlew build api', returnStatus: true)
+                    def buildResult = sh(script: ' ./gradlew build :apps:api', returnStatus: true)
                     if (buildResult != 0) {
                         error "Build failed."
                     }
@@ -41,7 +41,7 @@ pipeline {
             steps {
                 echo "Deploying version ${APP_VERSION}..."
                 script {
-                    def deployResult = sh(script: './gradlew bootRun api', returnStatus: true)
+                    def deployResult = sh(script: './gradlew bootRun :apps:api', returnStatus: true)
                     if (deployResult != 0) {
                         error "Deployment failed."
                     }
@@ -63,3 +63,4 @@ pipeline {
     }
 
 }
+
