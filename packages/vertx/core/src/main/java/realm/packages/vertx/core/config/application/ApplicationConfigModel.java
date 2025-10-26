@@ -5,10 +5,11 @@ import lombok.Setter;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Configuration;
 
-@Getter @Setter
+@Getter
+@Setter
 @Configuration
 @ConfigurationProperties("application")
 public class ApplicationConfigModel {
 
-    private String basePackage;
+  private String basePackage;
 }

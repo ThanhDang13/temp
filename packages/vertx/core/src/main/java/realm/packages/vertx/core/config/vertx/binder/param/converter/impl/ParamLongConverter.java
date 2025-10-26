@@ -9,18 +9,18 @@ import realm.packages.vertx.core.config.vertx.exception.VertxSpringCoreException
 @Component
 public class ParamLongConverter extends ParamConverter<Long> {
 
-    @Override
-    public Long convert(Object value) throws VertxSpringCoreException {
-        try {
-            return NumberUtils.createLong(String.valueOf(value));
-        } catch (Exception e) {
-            throw new VertxSpringCoreException("Invalid number value: " + value, HttpStatus.BAD_REQUEST.value());
-        }
-
+  @Override
+  public Long convert(Object value) throws VertxSpringCoreException {
+    try {
+      return NumberUtils.createLong(String.valueOf(value));
+    } catch (Exception e) {
+      throw new VertxSpringCoreException(
+          "Invalid number value: " + value, HttpStatus.BAD_REQUEST.value());
     }
+  }
 
-    @Override
-    public Class<Long> getSupportType() {
-        return Long.class;
-    }
+  @Override
+  public Class<Long> getSupportType() {
+    return Long.class;
+  }
 }

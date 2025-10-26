@@ -9,17 +9,18 @@ import realm.packages.vertx.core.config.vertx.exception.VertxSpringCoreException
 @Component
 public class ParamDoubleConverter extends ParamConverter<Double> {
 
-    @Override
-    public Double convert(Object value) throws VertxSpringCoreException {
-        try {
-            return NumberUtils.createDouble(String.valueOf(value));
-        } catch (Exception e) {
-            throw new VertxSpringCoreException("Invalid number value: " + value, HttpStatus.BAD_REQUEST.value());
-        }
+  @Override
+  public Double convert(Object value) throws VertxSpringCoreException {
+    try {
+      return NumberUtils.createDouble(String.valueOf(value));
+    } catch (Exception e) {
+      throw new VertxSpringCoreException(
+          "Invalid number value: " + value, HttpStatus.BAD_REQUEST.value());
     }
+  }
 
-    @Override
-    public Class<Double> getSupportType() {
-        return Double.class;
-    }
+  @Override
+  public Class<Double> getSupportType() {
+    return Double.class;
+  }
 }

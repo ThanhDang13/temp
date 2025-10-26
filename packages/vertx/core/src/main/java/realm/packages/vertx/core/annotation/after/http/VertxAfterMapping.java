@@ -7,5 +7,5 @@ import java.lang.annotation.*;
 @Inherited
 public @interface VertxAfterMapping {
 
-    String[] value() default {};
+  String[] value() default {};
 }

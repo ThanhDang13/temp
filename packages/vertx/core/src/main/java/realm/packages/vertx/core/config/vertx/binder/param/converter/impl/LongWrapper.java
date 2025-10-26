@@ -8,17 +8,16 @@ import realm.packages.vertx.core.config.vertx.exception.VertxSpringCoreException
 @Setter
 public class LongWrapper {
 
-    private Long value;
-    private VertxSpringCoreException exception;
+  private Long value;
+  private VertxSpringCoreException exception;
 
-    public LongWrapper() {
-    }
+  public LongWrapper() {}
 
-    public LongWrapper(Long value) {
-        this.value = value;
-    }
+  public LongWrapper(Long value) {
+    this.value = value;
+  }
 
-    public LongWrapper(VertxSpringCoreException exception) {
-        this.exception = exception;
-    }
+  public LongWrapper(VertxSpringCoreException exception) {
+    this.exception = exception;
+  }
 }

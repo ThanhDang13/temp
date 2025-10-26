@@ -10,6 +10,6 @@ import org.springframework.context.annotation.Configuration;
 @Getter
 @Setter
 public class UploadConfig {
-    String uploadDir = "tmp";
-    Integer maxFileSize = 300;
+  String uploadDir = "tmp";
+  Integer maxFileSize = 300;
 }

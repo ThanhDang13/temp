@@ -13,29 +13,29 @@ import realm.packages.vertx.core.config.vertx.handler.eb.DefaultEBResultResolver
 @Getter
 public class VertxEBApi {
 
-    private EBExceptionResolver exceptionResolver;
-    private ConsumerEBResultResolver consumerEBResultResolver;
-    private ConsumerEBResultResolver consumerEBComplteResolver;
+  private EBExceptionResolver exceptionResolver;
+  private ConsumerEBResultResolver consumerEBResultResolver;
+  private ConsumerEBResultResolver consumerEBComplteResolver;
 
-    @PostConstruct
-    public void init() {
-        this.exceptionResolver = new DefaultEBExceptionResolver();
-        this.consumerEBResultResolver = new DefaultEBResultResolver();
-        this.consumerEBComplteResolver = new DefaultEBCompleteResolver();
-    }
+  @PostConstruct
+  public void init() {
+    this.exceptionResolver = new DefaultEBExceptionResolver();
+    this.consumerEBResultResolver = new DefaultEBResultResolver();
+    this.consumerEBComplteResolver = new DefaultEBCompleteResolver();
+  }
 
-    public VertxEBApi ebExceptionResolver(DefaultEBExceptionResolver exceptionResolver) {
-        this.exceptionResolver = exceptionResolver;
-        return this;
-    }
+  public VertxEBApi ebExceptionResolver(DefaultEBExceptionResolver exceptionResolver) {
+    this.exceptionResolver = exceptionResolver;
+    return this;
+  }
 
-    public VertxEBApi ebResultResolver(ConsumerEBResultResolver consumerEBResultResolver) {
-        this.consumerEBResultResolver = consumerEBResultResolver;
-        return this;
-    }
+  public VertxEBApi ebResultResolver(ConsumerEBResultResolver consumerEBResultResolver) {
+    this.consumerEBResultResolver = consumerEBResultResolver;
+    return this;
+  }
 
-    public VertxEBApi ebComplteResolver(ConsumerEBResultResolver consumerEBComplteResolver) {
-        this.consumerEBComplteResolver = consumerEBComplteResolver;
-        return this;
-    }
+  public VertxEBApi ebComplteResolver(ConsumerEBResultResolver consumerEBComplteResolver) {
+    this.consumerEBComplteResolver = consumerEBComplteResolver;
+    return this;
+  }
 }

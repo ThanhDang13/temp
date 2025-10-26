@@ -8,8 +8,9 @@ import java.lang.annotation.Target;
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.PARAMETER)
 public @interface VertxRequestParam {
-    String value();
+  String value();
 
-    boolean required() default false;
-    String defaultValue() default "";
+  boolean required() default false;
+
+  String defaultValue() default "";
 }

@@ -4,13 +4,13 @@ import io.vertx.rxjava3.core.Vertx;
 
 public class VertxWrapper {
 
-    private static Vertx VERTX = Vertx.vertx();
+  private static Vertx VERTX = Vertx.vertx();
 
-    public static Vertx vertx() {
-        return VERTX;
-    }
+  public static Vertx vertx() {
+    return VERTX;
+  }
 
-    public static void refreshVertxBean(Vertx vertx) {
-        VERTX = vertx;
-    }
+  public static void refreshVertxBean(Vertx vertx) {
+    VERTX = vertx;
+  }
 }

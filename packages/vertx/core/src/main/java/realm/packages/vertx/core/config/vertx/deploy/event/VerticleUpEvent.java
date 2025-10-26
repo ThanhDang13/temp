@@ -4,7 +4,7 @@ import org.springframework.context.ApplicationEvent;
 
 public class VerticleUpEvent extends ApplicationEvent {
 
-    public VerticleUpEvent(Object source) {
-        super(source);
-    }
+  public VerticleUpEvent(Object source) {
+    super(source);
+  }
 }

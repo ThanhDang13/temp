@@ -5,5 +5,5 @@ import realm.packages.vertx.core.config.vertx.exception.VertxSpringCoreException
 @FunctionalInterface
 public interface Procedurable {
 
-    public void process() throws VertxSpringCoreException;
+  public void process() throws VertxSpringCoreException;
 }

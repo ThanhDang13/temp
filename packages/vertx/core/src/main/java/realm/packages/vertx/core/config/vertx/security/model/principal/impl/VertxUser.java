@@ -12,38 +12,34 @@ import realm.packages.vertx.core.config.vertx.security.model.principal.VertxPrin
 @Data
 public class VertxUser implements User {
 
-    private VertxPrincipal principal;
+  private VertxPrincipal principal;
 
-    public VertxUser() {
-    }
+  public VertxUser() {}
 
-    public VertxUser(VertxPrincipal principal) {
-        this.principal = principal;
-    }
+  public VertxUser(VertxPrincipal principal) {
+    this.principal = principal;
+  }
 
+  @Override
+  public JsonObject attributes() {
+    return null;
+  }
 
-    @Override
-    public JsonObject attributes() {
-        return null;
-    }
+  @Override
+  public User isAuthorized(Authorization authorization, Handler<AsyncResult<Boolean>> handler) {
+    return null;
+  }
 
-    @Override
-    public User isAuthorized(Authorization authorization, Handler<AsyncResult<Boolean>> handler) {
-        return null;
-    }
+  @Override
+  public JsonObject principal() {
+    return null;
+  }
 
-    @Override
-    public JsonObject principal() {
-        return null;
-    }
+  @Override
+  public void setAuthProvider(AuthProvider authProvider) {}
 
-    @Override
-    public void setAuthProvider(AuthProvider authProvider) {
-
-    }
-
-    @Override
-    public User merge(User user) {
-        return null;
-    }
+  @Override
+  public User merge(User user) {
+    return null;
+  }
 }

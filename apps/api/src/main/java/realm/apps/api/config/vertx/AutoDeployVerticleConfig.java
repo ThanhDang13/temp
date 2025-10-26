@@ -5,5 +5,4 @@ import realm.packages.vertx.core.annotation.EnableAutoDeployVerticle;
 
 @Configuration
 @EnableAutoDeployVerticle
-public class AutoDeployVerticleConfig {
-}
+public class AutoDeployVerticleConfig {}

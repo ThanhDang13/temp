@@ -4,5 +4,5 @@ import java.util.List;
 
 public interface VertxAuthentication {
 
-    List<String> getAuthorities();
+  List<String> getAuthorities();
 }

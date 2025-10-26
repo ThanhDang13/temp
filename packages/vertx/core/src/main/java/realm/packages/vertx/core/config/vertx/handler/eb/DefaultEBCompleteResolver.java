@@ -6,12 +6,12 @@ import org.slf4j.LoggerFactory;
 
 public class DefaultEBCompleteResolver implements ConsumerEBResultResolver {
 
-    private final Logger logger = LoggerFactory.getLogger(this.getClass());
+  private final Logger logger = LoggerFactory.getLogger(this.getClass());
 
-    @Override
-    public void resolve(Message<Object> message, Object result) {
-        if (logger.isDebugEnabled()) {
-            logger.debug("EB success and no reply result, just reply a completable");
-        }
+  @Override
+  public void resolve(Message<Object> message, Object result) {
+    if (logger.isDebugEnabled()) {
+      logger.debug("EB success and no reply result, just reply a completable");
     }
+  }
 }

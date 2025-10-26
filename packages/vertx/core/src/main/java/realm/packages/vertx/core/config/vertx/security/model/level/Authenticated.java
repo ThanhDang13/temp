@@ -5,14 +5,15 @@ import realm.packages.vertx.core.config.vertx.security.model.principal.impl.Vert
 
 public class Authenticated implements SecurityLevel {
 
-    private final static Authenticated authenticated = new Authenticated();
+  private static final Authenticated authenticated = new Authenticated();
 
-    @Override
-    public boolean isPermitted(User user) {
-        return user != null && ((VertxUser)user.getDelegate()).getPrincipal().getAuthentication() != null;
-    }
+  @Override
+  public boolean isPermitted(User user) {
+    return user != null
+        && ((VertxUser) user.getDelegate()).getPrincipal().getAuthentication() != null;
+  }
 
-    public static Authenticated authenticated() {
-        return authenticated;
-    }
+  public static Authenticated authenticated() {
+    return authenticated;
+  }
 }

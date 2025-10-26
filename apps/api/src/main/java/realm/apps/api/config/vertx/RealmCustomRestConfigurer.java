@@ -1,17 +1,18 @@
-//package realm.apps.api.config.vertx;
+// package realm.apps.api.config.vertx;
 //
-//import org.springframework.stereotype.Component;
-//import vn.backend.entity.share.config.vertx.CustomRestConfigurer;
-//import realm.packages.vertx.core.config.vertx.security.SecurityResolver;
+// import org.springframework.stereotype.Component;
+// import vn.backend.entity.share.config.vertx.CustomRestConfigurer;
+// import realm.packages.vertx.core.config.vertx.security.SecurityResolver;
 //
-//@Component
-//public class RealmCustomRestConfigurer extends CustomRestConfigurer {
+// @Component
+// public class RealmCustomRestConfigurer extends CustomRestConfigurer {
 //
 //    /**
 //     * Chia làm 3 vùng:
 //     * 1 - vùng truy xuất free (public),
 //     * 2 - vùng truy xuất cần authenticate (xác thực là làm được), auth
-//     * 3 - vùng truy xuất cần authorize (có quyền cụ thể nào đó mới làm được - cài đặt cụ thể trong từng code)
+//     * 3 - vùng truy xuất cần authorize (có quyền cụ thể nào đó mới làm được - cài đặt cụ thể
+// trong từng code)
 //     *
 //     * @return
 //     */
@@ -22,4 +23,4 @@
 //                .match("/adminapi/customer/update/fromPartner").free()
 //                ;
 //    }
-//}
+// }

@@ -9,5 +9,5 @@ import org.springframework.stereotype.Component;
 @ConfigurationProperties("vertx.server")
 public class VertxServerModel {
 
-    private Integer port;
+  private Integer port;
 }

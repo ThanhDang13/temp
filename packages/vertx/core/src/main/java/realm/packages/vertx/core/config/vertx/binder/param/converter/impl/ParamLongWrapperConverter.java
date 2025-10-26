@@ -9,22 +9,23 @@ import realm.packages.vertx.core.config.vertx.exception.VertxSpringCoreException
 @Component
 public class ParamLongWrapperConverter extends ParamConverter<LongWrapper> {
 
-    @Override
-    public LongWrapper convert(Object value) throws VertxSpringCoreException {
-        try {
-            return new LongWrapper(NumberUtils.createLong(String.valueOf(value)));
-        } catch (Exception e) {
-            return new LongWrapper(new VertxSpringCoreException("Invalid number value: " + value, HttpStatus.BAD_REQUEST.value()));
-        }
-
+  @Override
+  public LongWrapper convert(Object value) throws VertxSpringCoreException {
+    try {
+      return new LongWrapper(NumberUtils.createLong(String.valueOf(value)));
+    } catch (Exception e) {
+      return new LongWrapper(
+          new VertxSpringCoreException(
+              "Invalid number value: " + value, HttpStatus.BAD_REQUEST.value()));
     }
+  }
 
-    public LongWrapper convertNullValue() {
-        return new LongWrapper();
-    }
+  public LongWrapper convertNullValue() {
+    return new LongWrapper();
+  }
 
-    @Override
-    public Class<LongWrapper> getSupportType() {
-        return LongWrapper.class;
-    }
+  @Override
+  public Class<LongWrapper> getSupportType() {
+    return LongWrapper.class;
+  }
 }

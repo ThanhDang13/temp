@@ -1,9 +1,6 @@
 rootProject.name = "spring-vertx"
 
-include(
-        "apps:api",
-        "packages:vertx:core"
-)
+include(":apps:api", ":packages:vertx:core")
 
-project(":packages:vertx:core").name = "core"
-project(":apps:api").name = "api"
+//project(":packages:vertx:core").name = "vertx.core"
+//project(":apps:api").name = "api"

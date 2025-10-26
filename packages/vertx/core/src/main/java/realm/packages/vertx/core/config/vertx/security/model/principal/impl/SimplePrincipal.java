@@ -10,15 +10,15 @@ import realm.packages.vertx.core.config.vertx.security.model.principal.VertxPrin
 @Builder
 public class SimplePrincipal implements VertxPrincipal {
 
-    private VertxAuthentication authentication;
-    private Object otherInfo;
+  private VertxAuthentication authentication;
+  private Object otherInfo;
 
-    //Define client info
-    private MultiMap clientInfo;
-    private Object id;
+  // Define client info
+  private MultiMap clientInfo;
+  private Object id;
 
-    @Override
-    public VertxAuthentication getAuthentication() {
-        return authentication;
-    }
+  @Override
+  public VertxAuthentication getAuthentication() {
+    return authentication;
+  }
 }
