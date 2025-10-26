@@ -15,6 +15,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building...'
+                ./gradlew build api
             }
         }
 
@@ -27,6 +28,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying...'
+                ./gradlew bootRun api
             }
         }
     }
