@@ -8,27 +8,38 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
+                echo 'Checking out the source code...'
                 checkout scm
             }
         }
-        
+
         stage('Build') {
             steps {
-                echo 'Building...'
-                ./gradlew build api
+                echo 'Building the application...'
+                script {
+                    def buildResult = sh(script: './gradlew build api', returnStatus: true)
+                    if (buildResult != 0) {
+                        error "Build failed."
+                    }
+                }
             }
         }
 
         stage('Test') {
             steps {
-                echo 'Testing...'
+                echo 'Running tests...'
             }
         }
 
         stage('Deploy') {
             steps {
-                echo 'Deploying...'
-                ./gradlew bootRun api
+                echo "Deploying version ${APP_VERSION}..."
+                script {
+                    def deployResult = sh(script: './gradlew bootRun api', returnStatus: true)
+                    if (deployResult != 0) {
+                        error "Deployment failed."
+                    }
+                }
             }
         }
     }
@@ -39,6 +50,9 @@ pipeline {
         }
         failure {
             echo 'Build or Deploy failed!'
+        }
+        always {
+            echo 'Pipeline finished.'
         }
     }
 }
