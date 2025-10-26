@@ -10,6 +10,12 @@ pipeline {
             steps {
                 echo 'Checking out the source code...'
                 checkout scm
+                script {
+                    def chmodResult = sh(script: 'chmod +x gradlew', returnStatus: true)
+                    if (chmodResult != 0) {
+                        error "chmod failed."
+                    }
+                }
             }
         }
 
@@ -17,7 +23,7 @@ pipeline {
             steps {
                 echo 'Building the application...'
                 script {
-                    def buildResult = sh(script: './gradlew build api', returnStatus: true)
+                    def buildResult = sh(script: ' ./gradlew build api', returnStatus: true)
                     if (buildResult != 0) {
                         error "Build failed."
                     }
@@ -55,4 +61,5 @@ pipeline {
             echo 'Pipeline finished.'
         }
     }
+
 }
