@@ -18,7 +18,7 @@ pipeline {
             steps {
                 echo 'Building the application...'
                 script {
-                    def buildResult = sh(script: './gradlew build api', returnStatus: true)
+                    def buildResult = sh(script: './gradlew :apps:api:build', returnStatus: true)
                     if (buildResult != 0) {
                         error "Build failed."
                     }
