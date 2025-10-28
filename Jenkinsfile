@@ -10,6 +10,7 @@ pipeline {
             steps {
                 echo 'Checking out the source code...'
                 checkout scm
+                sh 'chmod +x gradlew'
             }
         }
 
