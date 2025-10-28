@@ -35,7 +35,7 @@ pipeline {
             steps {
                 echo "Deploying version ${APP_VERSION}..."
                 script {
-                    def deployResult = sh(script: './gradlew bootRun api', returnStatus: true)
+                    def deployResult = sh(script: 'nohup java -jar apps/api/build/libs/api-1.0.jar --spring.profiles.active=dev > app.log 2>&1 &', returnStatus: true)
                     if (deployResult != 0) {
                         error "Deployment failed."
                     }
